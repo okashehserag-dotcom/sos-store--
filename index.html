@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#EADCC5" />
+  <meta name="description" content="SOS STORE - متجر إلكتروني فاخر" />
+  <title>SOS STORE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip" href="#main">تخطي إلى المحتوى</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div class="brand-text">
+          <h1 class="brand-title">SOS STORE</h1>
+          <p class="brand-subtitle">Luxury feel • Mobile-first • Fast</p>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="التنقل">
+        <a class="nav-link" href="#sections">الأقسام</a>
+        <a class="nav-link" href="#reviews">التقييمات</a>
+        <a class="nav-link" href="#contact">تواصل</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-card">
+          <p class="hero-kicker">SOS STORE</p>
+          <h2 class="hero-headline">متجر أنيق بسلايدر خفيف، بحث وفلترة داخل كل قسم، ولايك مرة واحدة لكل زائر.</h2>
+          <p class="hero-note">جاهز للنشر على GitHub Pages.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#sections">استكشف الأقسام</a>
+            <a class="btn btn-ghost" href="#contact">تواصل</a>
+          </div>
+        </div>
+
+        <div class="hero-aside" aria-hidden="true">
+          <div class="tile tile-a"></div>
+          <div class="tile tile-b"></div>
+          <div class="tile tile-c"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sections" class="sections">
+      <div class="container">
+        <div class="section-head">
+          <h3 class="section-title">الأقسام</h3>
+          <p class="section-desc">افتح أي قسم لعرض 10 منتجات بسلايدر + بحث + فلترة.</p>
+        </div>
+        <div id="sectionsGrid" class="sections-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+      <div class="container">
+        <div class="section-head">
+          <h3 class="section-title">Reviews & Feedback</h3>
+          <p class="section-desc">حفظ محلي على جهاز الزائر.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <form id="reviewForm" class="card form-card" autocomplete="off">
+            <div class="card-head">
+              <h4 class="card-title">اكتب رأيك</h4>
+              <p class="card-sub">يظهر فقط على نفس الجهاز.</p>
+            </div>
+
+            <div class="field">
+              <label for="reviewName">الاسم</label>
+              <input id="reviewName" name="name" type="text" maxlength="30" required />
+            </div>
+
+            <div class="field">
+              <label for="reviewRating">التقييم</label>
+              <select id="reviewRating" name="rating" required>
+                <option value="5">★★★★★ (5)</option>
+                <option value="4">★★★★☆ (4)</option>
+                <option value="3">★★★☆☆ (3)</option>
+                <option value="2">★★☆☆☆ (2)</option>
+                <option value="1">★☆☆☆☆ (1)</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="reviewText">التعليق</label>
+              <textarea id="reviewText" name="text" rows="4" maxlength="220" required></textarea>
+              <div class="hint"><span id="reviewCount">0</span>/220</div>
+            </div>
+
+            <button class="btn btn-primary" type="submit">إرسال</button>
+          </form>
+
+          <div class="card list-card">
+            <div class="card-head row">
+              <h4 class="card-title">آخر التقييمات</h4>
+              <button id="clearReviews" class="btn btn-ghost btn-sm" type="button">مسح</button>
+            </div>
+            <div id="reviewsList" class="reviews-list" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container contact-inner">
+        <div class="contact-card">
+          <h3 class="section-title">تواصل</h3>
+          <p class="section-desc">تحويل مباشر إلى إنستقرام:</p>
+          <a class="btn btn-primary" target="_blank" rel="noopener" href="https://instagram.com/sos_sstorre">@sos_sstorre</a>
+          <p class="contact-note">يفتح في تبويب جديد.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> SOS STORE</p>
+        <a class="nav-link" href="#main">أعلى</a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
